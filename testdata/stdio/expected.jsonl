@@ -1,0 +1,6 @@
+{"jsonrpc":"2.0","id":1,"result":{"protocolVersion":"2025-11-25","capabilities":{"tools":{"listChanged":false}},"serverInfo":{"name":"mcp-server-go","version":"0.1.0"}}}
+{"jsonrpc":"2.0","id":"init-old","result":{"protocolVersion":"2024-11-05","capabilities":{"tools":{"listChanged":false}},"serverInfo":{"name":"mcp-server-go","version":"0.1.0"}}}
+{"jsonrpc":"2.0","id":2,"result":{"tools":[]}}
+{"jsonrpc":"2.0","id":"p-1","result":{}}
+{"jsonrpc":"2.0","id":3,"error":{"code":-32602,"message":"未知工具: no_such_tool"}}
+{"jsonrpc":"2.0","id":4,"error":{"code":-32601,"message":"未知方法: no/such/method"}}

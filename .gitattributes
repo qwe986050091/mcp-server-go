@@ -1,0 +1,5 @@
+# 统一按 LF 入库（与既有四个仓库保持一致）：避免 Windows 上提交 CRLF 后被
+# Linux 侧（CI / 部署脚本）读出 $'\r' 之类的问题。
+* text=auto eol=lf
+*.png binary
+*.jpg binary

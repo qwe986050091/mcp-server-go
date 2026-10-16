@@ -1,0 +1,22 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches: [master]
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          # 本项目零第三方依赖（无 go.sum），显式关闭依赖缓存，避免 setup-go 因缺少 go.sum 报错
+          cache: false
+      - name: Vet
+        run: go vet ./...
+      - name: Test
+        run: go test ./... -count=1
